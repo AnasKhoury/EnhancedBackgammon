@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--game screen-->
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GameBoardController">
+   <center>
+      <AnchorPane fx:id="gameBoardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="799.0">
+      <children>
+            <BorderPane prefHeight="606.0" prefWidth="799.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+            </BorderPane>
+      	<!--board sides --> 
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1c39e" height="591.0" layoutX="336.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="465.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1c39e" height="614.0" stroke="BLACK" strokeType="INSIDE" width="338.0" />
+       	<!--board stations  -->
+       	<Polygon fx:id="station1" fill="#fae8e8" layoutX="646.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+       	<Polygon fx:id="station2" fill="#32312d" layoutX="596.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />	
+       	<Polygon fx:id="station3" fill="#fae8e8" layoutX="546.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />    
+      	<Polygon fx:id="station4" fill="#32312d" layoutX="496.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station5" fill="#fae8e8" layoutX="446.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+       	<Polygon fx:id="station6" fill="#32312d" layoutX="396.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />	
+      	<Polygon fx:id="station7" fill="#fae8e8" layoutX="275.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+       	<Polygon fx:id="station8" fill="#32312d" layoutX="225.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />	
+      	<Polygon fx:id="station9" fill="#fae8e8" layoutX="175.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station10" fill="#32312d" layoutX="125.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />	
+      	<Polygon fx:id="station11" fill="#fae8e8" layoutX="75.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+       	<Polygon fx:id="station12" fill="#32312d" layoutX="25.0" layoutY="510.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />	
+      	<Polygon fx:id="station13" fill="#fae8e8" layoutX="25.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+       	<Polygon fx:id="station14" fill="#32312d" layoutX="75.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />	
+      	<Polygon fx:id="station15" fill="#fae8e8" layoutX="125.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station16" fill="#32312d" layoutX="175.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station17" fill="#fae8e8" layoutX="225.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station18" fill="#32312d" layoutX="275.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station19" fill="#fae8e8" layoutX="396.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station20" fill="#32312d" layoutX="446.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station21" fill="#fae8e8" layoutX="496.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station22" fill="#32312d" layoutX="546.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station23" fill="#fae8e8" layoutX="596.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      	<Polygon fx:id="station24" fill="#32312d" layoutX="646.0" layoutY="147.0" points="-50.0,40.0,50.0,40.0,0.0,-60.0" rotate="180.0" scaleX="0.5" scaleY="2.3" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Rectangle fx:id="station25" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="230.0" layoutX="669.0" layoutY="25.0" stroke="TRANSPARENT" strokeType="INSIDE" width="130.0" />
+      <Rectangle fx:id="space1" arcHeight="5.0" arcWidth="5.0" fill="#e5d27c00" height="230.0" layoutX="300.0" layoutY="25.0" stroke="TRANSPARENT" strokeType="INSIDE" width="71.0" />
+      <Rectangle fx:id="space2" arcHeight="5.0" arcWidth="5.0" fill="#a6a29500" height="230.0" layoutX="300.0" layoutY="376.0" stroke="TRANSPARENT" strokeType="INSIDE" width="71.0" />
+      
+      <MenuBar fx:id="menuBar" prefHeight="16.0" prefWidth="799.0">
+      	<menus>
+                <Menu mnemonicParsing="false" text="File">
+                	<items>
+                		<MenuItem mnemonicParsing="false" text="New Game" />
+                		<MenuItem mnemonicParsing="false" text="Close" />
+                	</items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Rules" />
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+               
+      	</menus>
+      
+      <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#bf8383" />
+                     </light>
+                  </Lighting>
+               </effect>
+      </MenuBar>
+      <Text fx:id="infoText" layoutX="687.0" layoutY="250.0" stroke="BLACK" text="Roll the dice!">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Text> 
+      <Text fx:id="player1Text" fill="WHITE" layoutX="698.0" layoutY="280.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WHITE" underline="true" wrappingWidth="87.939453125">
+          <effect>
+              <InnerShadow>
+                     <color>
+                        <Color red="0.501960813999176" green="0.501960813999176" blue="0.501960813999176" />
+                     </color>
+                  </InnerShadow>
+          </effect>
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Text>
+      
+      <Text fx:id="player2Text" layoutX="698.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLACK" underline="true">
+          <font>
+              <Font name="System Bold" size="15.0" />
+          </font>
+      </Text>
+      
+               
+      <Button fx:id="btnRoll" layoutX="698.0" layoutY="303.0" mnemonicParsing="false" text="Roll dice" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <effect>
+                  <SepiaTone level="0.51" />
+               </effect>
+            </Button>
+            <Button fx:id="btnOK" disable="true" layoutX="698.0" layoutY="303.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="81.0" text="OK" textOverrun="CLIP" visible="false">
+               <effect>
+                  <SepiaTone level="0.51" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <!-- players' pieces -->
+            <!-- player1 pieces -->
+            <Circle fx:id="player1_piece1" layoutX="646.0" layoutY="48.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece2" layoutX="646.0" layoutY="94.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece3" layoutX="25.0" layoutY="48.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece4" layoutX="25.0" layoutY="94.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece5" layoutX="25.0" layoutY="137.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece6" layoutX="25.0" layoutY="183.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece7" layoutX="25.0" layoutY="229.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece8" layoutX="225.0" layoutY="583.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece9" layoutX="225.0" layoutY="537.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece10" layoutX="225.0" layoutY="491.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece11" layoutX="396.0" layoutY="583.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece12" layoutX="396.0" layoutY="537.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece13" layoutX="396.0" layoutY="491.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece14" layoutX="396.0" layoutY="445.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player1_piece15" layoutX="396.0" layoutY="399.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4867256552772185" centerY="0.47727274894714355" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5773889636608345">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9452887177467346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+             <!-- player2 pieces -->
+             <Circle fx:id="player2_piece1" layoutX="646.0" layoutY="583.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece2" layoutX="646.0" layoutY="537.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+             <Circle fx:id="player2_piece3" layoutX="25.0" layoutY="583.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece4" layoutX="25.0" layoutY="537.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece5" layoutX="25.0" layoutY="491.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece6" layoutX="25.0" layoutY="445.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+             <Circle fx:id="player2_piece7" layoutX="25.0" layoutY="399.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece8" layoutX="225.0" layoutY="48.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece9" layoutX="225.0" layoutY="94.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece10" layoutX="225.0" layoutY="140.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+           
+      
+      <Rectangle fx:id="station0" arcHeight="5.0" arcWidth="5.0" fill="#572c2c00" height="230.0" layoutX="669.0" layoutY="381.0" stroke="TRANSPARENT" strokeType="INSIDE" width="130.0" />
+             <Circle fx:id="player2_piece11" layoutX="396.0" layoutY="45.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece12" layoutX="396.0" layoutY="91.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece13" layoutX="396.0" layoutY="137.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+           <Circle fx:id="player2_piece14" layoutX="396.0" layoutY="183.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="player2_piece15" layoutX="396.0" layoutY="229.0" radius="23.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.4911504846758547" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.573170731707317">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7133243606998653">
+                           <color>
+                              <Color opacity="0.9247720241546631" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9030955585464333">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5" green="0.5" blue="0.5" opacity="0.9794833064079285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+      		<ImageView fx:id="die2" fitHeight="60.0" fitWidth="60.0" layoutX="508.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" />
+            
+            <ImageView fx:id="die1" fitHeight="60.0" fitWidth="60.0" layoutX="446.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" />
+      		
+      
+      
+      
+      </children>
+      
+      
+      
+      
+      
+      
+      
+      
+      </AnchorPane>
+   </center>
+</BorderPane>

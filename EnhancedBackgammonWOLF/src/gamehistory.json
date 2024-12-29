@@ -1,0 +1,83 @@
+{
+  "games" : [ {
+    "player1" : "anas",
+    "player2" : "marios",
+    "difficulty" : "EASY",
+    "winnerName" : "marios",
+    "durationInSeconds" : 450,
+    "gameStartTime" : "2024-01-01 12:00:00",
+    "gameEndTime" : "2024-01-01 12:07:30"
+  }, {
+    "player1" : "ehab",
+    "player2" : "nabel",
+    "difficulty" : "EASY",
+    "winnerName" : "ehab",
+    "durationInSeconds" : 193,
+    "gameStartTime" : "2024-12-13 13:01:03",
+    "gameEndTime" : "2024-12-13 13:04:16"
+  }, {
+    "player1" : "mariis",
+    "player2" : "anes",
+    "difficulty" : "MEDIUM",
+    "winnerName" : "mariis",
+    "durationInSeconds" : 199,
+    "gameStartTime" : "2024-12-13 13:23:39",
+    "gameEndTime" : "2024-12-13 13:26:58"
+  }, {
+    "player1" : "nadine",
+    "player2" : "lama",
+    "difficulty" : "HARD",
+    "winnerName" : "nadine",
+    "durationInSeconds" : 157,
+    "gameStartTime" : "2024-12-13 13:33:23",
+    "gameEndTime" : "2024-12-13 13:36:00"
+  }, {
+    "player1" : "anas",
+    "player2" : "nabel",
+    "difficulty" : "EASY",
+    "winnerName" : "anas",
+    "durationInSeconds" : 0,
+    "gameStartTime" : "2024-12-13 13:43:37",
+    "gameEndTime" : "2024-12-13 13:43:37"
+  }, {
+    "player1" : "1",
+    "player2" : "1",
+    "difficulty" : "EASY",
+    "winnerName" : "1",
+    "durationInSeconds" : 0,
+    "gameStartTime" : "2024-12-13 13:51:11",
+    "gameEndTime" : "2024-12-13 13:51:11"
+  }, {
+    "player1" : "marios",
+    "player2" : "anas",
+    "difficulty" : "EASY",
+    "winnerName" : "marios",
+    "durationInSeconds" : 83,
+    "gameStartTime" : "2024-12-13 13:53:17",
+    "gameEndTime" : "2024-12-13 13:54:40"
+  }, {
+    "player1" : "nira",
+    "player2" : "sema",
+    "difficulty" : "EASY",
+    "winnerName" : "nira",
+    "durationInSeconds" : 77,
+    "gameStartTime" : "2024-12-13 14:02:37",
+    "gameEndTime" : "2024-12-13 14:03:54"
+  }, {
+    "player1" : "maya",
+    "player2" : "lana",
+    "difficulty" : "MEDIUM",
+    "winnerName" : "maya",
+    "durationInSeconds" : 67,
+    "gameStartTime" : "2024-12-13 14:05:07",
+    "gameEndTime" : "2024-12-13 14:06:15"
+  }, {
+    "player1" : "Layan",
+    "player2" : "Naeem",
+    "difficulty" : "HARD",
+    "winnerName" : "Layan",
+    "durationInSeconds" : 139,
+    "gameStartTime" : "2024-12-13 17:49:02",
+    "gameEndTime" : "2024-12-13 17:51:22"
+  } ]
+}

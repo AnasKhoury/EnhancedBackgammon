@@ -1,0 +1,63 @@
+{
+  "questions" : [ {
+    "question" : "What is the primary purpose of software engineering?",
+    "answers" : [ "To develop hardware", "To create and maintain software efficiently", "To test network security", "To design user interfaces only" ],
+    "correct_ans" : "2",
+    "difficulty" : "EASY"
+  }, {
+    "question" : "Which software development model follows a sequential approach?",
+    "answers" : [ "Agile", "Waterfall", "Scrum", "Spiral" ],
+    "correct_ans" : "2",
+    "difficulty" : "MEDIUM"
+  }, {
+    "question" : "What does MVC stand for in software design?",
+    "answers" : [ "Model-View-Controller", "Main-View-Controller", "Module-View-Client", "Model-View-Compiler" ],
+    "correct_ans" : "1",
+    "difficulty" : "EASY"
+  }, {
+    "question" : "Which of these is a design pattern?",
+    "answers" : [ "Singleton", "Observer", "Factory", "All of the above" ],
+    "correct_ans" : "4",
+    "difficulty" : "HARD"
+  }, {
+    "question" : "Which phase is not part of the software development lifecycle (SDLC)?",
+    "answers" : [ "Requirement Analysis", "Implementation", "Execution", "Maintenance" ],
+    "correct_ans" : "3",
+    "difficulty" : "MEDIUM"
+  }, {
+    "question" : "What is the primary goal of unit testing?",
+    "answers" : [ "To test the entire application", "To validate the software requirements", "To verify individual components of the software", "To test the application's user interface" ],
+    "correct_ans" : "3",
+    "difficulty" : "EASY"
+  }, {
+    "question" : "What does the acronym SOLID stand for in software engineering?",
+    "answers" : [ "Set of Logical Implementation Design", "Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion", "Structured Object Layout and Integration Design", "Software-Oriented Logical Independent Design" ],
+    "correct_ans" : "2",
+    "difficulty" : "HARD"
+  }, {
+    "question" : "What is the purpose of a design pattern?",
+    "answers" : [ "To optimize the hardware performance", "To provide a reusable solution to a common software problem", "To develop unique software for every project", "To analyze hardware architecture" ],
+    "correct_ans" : "2",
+    "difficulty" : "MEDIUM"
+  }, {
+    "question" : "DO you like coffee",
+    "answers" : [ "yes", "no", "maybe", "what" ],
+    "correct_ans" : "yes",
+    "difficulty" : "Easy"
+  }, {
+    "question" : "What does CAPTCHA stand for?",
+    "answers" : [ "Computerized Automated Process to Analyze Testable Humans and Algorithms", "Controlled Application of Processing Technology for Cognitive Analysis", "Completely Automated Public Turing test to tell Computers and Humans Apart", "Cybernetic Analysis Program for Testing Human Access" ],
+    "correct_ans" : "Completely Automated Public Turing test to tell Computers and Humans Apart",
+    "difficulty" : "Medium"
+  }, {
+    "question" : "kiki",
+    "answers" : [ "1", "2", "3", "4" ],
+    "correct_ans" : "3",
+    "difficulty" : "Hard"
+  }, {
+    "question" : "What is the color of the sky",
+    "answers" : [ "blue", "red", "yellow", "green" ],
+    "correct_ans" : "blue",
+    "difficulty" : "Easy"
+  } ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddQuestionDialogController" spacing="10">
+ <stylesheets>
+        <String fx:value="view/style.css"/>
+    </stylesheets>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <Label text="Enter Question Details" style="-fx-font-weight: bold;"/>
+    
+    <TextField fx:id="questionTextField" promptText="Enter question text"/>
+    
+    <TextField fx:id="answer1TextField" promptText="Answer 1"/>
+    <TextField fx:id="answer2TextField" promptText="Answer 2"/>
+    <TextField fx:id="answer3TextField" promptText="Answer 3"/>
+    <TextField fx:id="answer4TextField" promptText="Answer 4"/>
+    
+    <ComboBox fx:id="correctAnswerComboBox" promptText="Select Correct Answer">
+        <!-- ComboBox will be populated dynamically in the controller -->
+    </ComboBox>
+    
+    <ComboBox fx:id="difficultyComboBox" layoutX="192.0" layoutY="57.0" prefWidth="150.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Easy"/>
+                <String fx:value="Medium"/>
+                <String fx:value="Hard"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    
+    <Button text="Add Question" onAction="#handleAddQuestion" style="-fx-background-color: #8F9A88; -fx-text-fill: white;"/>
+    <Button text="Cancel" onAction="#handleCancel" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+</VBox>

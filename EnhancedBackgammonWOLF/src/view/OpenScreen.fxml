@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OpenScreenController">
+    <children>
+        <!-- Title -->
+        <VBox alignment="CENTER" layoutX="133.0" layoutY="2.0" prefHeight="337.0" prefWidth="484.0" spacing="20.0">
+            <Label fx:id="titleLabel" style="-fx-font-family: 'Arial'; -fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+            <ImageView fitHeight="246.0" fitWidth="387.0" preserveRatio="true">
+                <image>   
+                       <Image url="@/view/LOGO.png" />
+                </image>
+            </ImageView>
+
+            <!-- Buttons for navigation -->
+            <VBox alignment="CENTER" spacing="15.0">
+                <Button prefHeight="41.0" prefWidth="189.0" style="-fx-font-size: 14px; -fx-background-color: #8F9A88; -fx-text-fill: white; -fx-padding: 10 20; -fx-cursor: hand;" text="Start Game" onAction="#handleStartGame"/>
+                <Button prefHeight="42.0" prefWidth="188.0" style="-fx-font-size: 14px; -fx-background-color: #8F9A88; -fx-text-fill: white; -fx-padding: 10 20; -fx-cursor: hand;" text="Question Management" onAction="#goToQuestionManagement">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                </Button>
+                <Button prefHeight="41.0" prefWidth="192.0" style="-fx-font-size: 14px; -fx-background-color: #8F9A88; -fx-text-fill: white; -fx-padding: 10 20; -fx-cursor: hand;" text="Game History" />
+            </VBox>
+        </VBox>
+        
+        <!-- Dice Section -->
+        <HBox alignment="CENTER" layoutX="150.0" layoutY="250.0" spacing="20.0" />
+        <Label fx:id="dice2" layoutX="426.0" layoutY="6.0" style="-fx-font-size: 50px;" text="🎲" />
+        <Label fx:id="dice1" layoutX="301.0" layoutY="6.0" style="-fx-font-size: 50px;" text="🎲" />
+        
+        <!-- FAQ and Settings Buttons -->
+        <Button layoutX="718.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="32.0" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" />
+        <ImageView fitHeight="27.0" fitWidth="21.0" layoutX="726.0" layoutY="2.0">
+            <image>
+                <Image url="@../../../../Downloads/faq.png" />
+            </image>
+        </ImageView>
+        
+        <Button layoutX="679.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="32.0" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" />
+        <ImageView layoutX="684.0" layoutY="8.0">
+            <image>
+                <Image url="@../../../../Downloads/settings.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

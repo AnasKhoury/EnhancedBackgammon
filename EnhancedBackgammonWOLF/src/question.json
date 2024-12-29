@@ -1,0 +1,114 @@
+{
+    "questions": [
+        {
+            "question": "What is the primary purpose of software engineering?",
+            "answers": [
+                "To develop hardware",
+                "To create and maintain software efficiently",
+                "To test network security",
+                "To design user interfaces only"
+            ],
+            "correct_ans": "2",
+            "difficulty": "1"
+        },
+        {
+            "question": "Which software development model follows a sequential approach?",
+            "answers": [
+                "Agile",
+                "Waterfall",
+                "Scrum",
+                "Spiral"
+            ],
+            "correct_ans": "2",
+            "difficulty": "2"
+        },
+        {
+            "question": "What does MVC stand for in software design?",
+            "answers": [
+                "Model-View-Controller",
+                "Main-View-Controller",
+                "Module-View-Client",
+                "Model-View-Compiler"
+            ],
+            "correct_ans": "1",
+            "difficulty": "1"
+        },
+        {
+            "question": "Which of these is a design pattern?",
+            "answers": [
+                "Singleton",
+                "Observer",
+                "Factory",
+                "All of the above"
+            ],
+            "correct_ans": "4",
+            "difficulty": "3"
+        },
+        {
+            "question": "Which phase is not part of the software development lifecycle (SDLC)?",
+            "answers": [
+                "Requirement Analysis",
+                "Implementation",
+                "Execution",
+                "Maintenance"
+            ],
+            "correct_ans": "3",
+            "difficulty": "2"
+        },
+        {
+            "question": "What is the primary goal of unit testing?",
+            "answers": [
+                "To test the entire application",
+                "To validate the software requirements",
+                "To verify individual components of the software",
+                "To test the application's user interface"
+            ],
+            "correct_ans": "3",
+            "difficulty": "1"
+        },
+        {
+            "question": "What does the acronym SOLID stand for in software engineering?",
+            "answers": [
+                "Set of Logical Implementation Design",
+                "Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion",
+                "Structured Object Layout and Integration Design",
+                "Software-Oriented Logical Independent Design"
+            ],
+            "correct_ans": "2",
+            "difficulty": "3"
+        },
+        {
+            "question": "Which of the following is an Agile methodology?",
+            "answers": [
+                "Waterfall",
+                "Scrum",
+                "Iterative",
+                "Prototype"
+            ],
+            "correct_ans": "2",
+            "difficulty": "2"
+        },
+        {
+            "question": "Which of the following tools is commonly used for version control?",
+            "answers": [
+                "JIRA",
+                "Git",
+                "Docker",
+                "Kubernetes"
+            ],
+            "correct_ans": "2",
+            "difficulty": "1"
+        },
+        {
+            "question": "What is the purpose of a design pattern?",
+            "answers": [
+                "To optimize the hardware performance",
+                "To provide a reusable solution to a common software problem",
+                "To develop unique software for every project",
+                "To analyze hardware architecture"
+            ],
+            "correct_ans": "2",
+            "difficulty": "2"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="448.0" prefWidth="735.0" style="-fx-background-color: linear-gradient(to bottom, #D8E2DC, #FFE5D9);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GameSetupController">
+   <children>
+      <StackPane layoutX="271.0" layoutY="112.0" prefHeight="108.0" prefWidth="171.0">
+         <!-- Logo -->
+         <ImageView fx:id="logoImage" fitHeight="105.0" fitWidth="137.0" preserveRatio="true">
+            <image>
+               <Image url="@/view/LOGO.png" />
+            </image>
+            <viewport>
+               <Rectangle2D />
+            </viewport>
+         </ImageView>
+      </StackPane>
+      <Label fx:id="dice2" layoutX="240.0" layoutY="21.0" style="-fx-font-size: 50px;" text="🎲" />
+         
+      <TextField fx:id="player2Name" layoutX="418.0" layoutY="150.0" prefWidth="200.0" promptText="Enter Player 2 Name" style="-fx-font-size: 14; -fx-background-color: #FAD4D4; -fx-border-color: #9D8189; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-radius: 8;" />
+
+      <Button fx:id="startGameButton" layoutX="304.0" layoutY="299.0" onAction="#startGame" style="-fx-font-size: 16; -fx-background-color: #F4ACB7; -fx-border-color: #9D8189; -fx-border-radius: 12; -fx-border-width: 2; -fx-background-radius: 12; -fx-text-fill: #6D6875;" text="Start Game" />
+
+      <TextField editable="false" layoutX="256.0" layoutY="73.0" prefWidth="200.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #6D6875; -fx-background-color: transparent; -fx-alignment: center;" text="Game Setup" />
+      <Label fx:id="dice1" layoutX="425.0" layoutY="21.0" style="-fx-font-size: 50px;" text="🎲" />
+
+      <!-- Dice Animation -->
+      <VBox alignment="CENTER" layoutX="81.0" layoutY="-5.0" spacing="10.0" />
+
+         <ComboBox fx:id="difficultyComboBox" layoutX="256.0" layoutY="224.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-background-color: #F4ACB7; -fx-border-color: #9D8189; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-radius: 8;">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="easy" />
+               <String fx:value="medium" />
+               <String fx:value="hard" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      
+                  <TextField fx:id="player1Name" layoutX="90.0" layoutY="150.0" prefWidth="200.0" promptText="Enter Player 1 Name" style="-fx-font-size: 14; -fx-background-color: #FAD4D4; -fx-border-color: #9D8189; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-radius: 8;" />
+   </children>
+</AnchorPane>

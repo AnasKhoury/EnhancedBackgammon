@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.QuestionControl">
+    <stylesheets>
+        <String fx:value="view/style.css"/>
+    </stylesheets>
+    <children>
+        <!-- Categories Section (Easy, Medium, Hard) in HBox -->
+        <HBox layoutX="10" layoutY="10" spacing="10">
+            <Button fx:id="easyCategoryBtn" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" text="Easy" onAction="#handleEasyCategory" />
+            <Button fx:id="mediumCategoryBtn" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" text="Medium" onAction="#handleMediumCategory" />
+            <Button fx:id="hardCategoryBtn" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" text="Hard" onAction="#handleHardCategory" />
+        </HBox>
+
+        <!-- Questions Section -->
+        <VBox fx:id="questionsVBox" layoutX="10" layoutY="40" prefHeight="400" prefWidth="685" spacing="15">
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Questions" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            </HBox>
+            
+            <!-- Custom ListView with Edit/Delete buttons -->
+            <ListView fx:id="questionsListView" prefHeight="300" prefWidth="622" />
+
+            <!-- Add Question Button -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button fx:id="addQuestionBtn" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" text="Add New Question" onAction="#addNewQuestionPanel" />
+                <Button fx:id="deleteQuestionBtn" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" text="Delete Question" onAction="#deleteQuestion" />
+                
+                <Button fx:id="editQuestionBtn" style="-fx-background-color: #8F9A88; -fx-text-fill: white; -fx-cursor: hand;" text="Edit Question" onAction="#editQuestion" />
+                
+            </HBox>
+        </VBox>
+
+        <ImageView fitHeight="87.0" fitWidth="106.0" layoutX="624.0">
+            <image>
+                <Image url="@/view/LOGO.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

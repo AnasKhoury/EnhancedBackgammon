@@ -1,0 +1,22 @@
+# Eclipse project-specific files
+.classpath
+.project
+.settings/
+
+# Build and output directories
+/bin/
+/target/
+/build/
+
+# Temporary or backup files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.old
+*.orig
+
+# OS-specific files
+.DS_Store
+Thumbs.db
